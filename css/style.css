@@ -32,6 +32,10 @@ nav a {
     font-weight: bold;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
 
 /* =========================
    HERO
@@ -120,6 +124,43 @@ section:nth-of-type(even) {
 
 
 /* =========================
+   PORTFOLIO CARDS
+========================= */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.portfolio-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-card h3 {
+    color: #0B3A6D;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.portfolio-card p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -165,5 +206,14 @@ footer {
         display: inline-block;
         margin: 5px;
         font-size: 14px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .portfolio-card {
+        padding: 25px;
     }
 }
