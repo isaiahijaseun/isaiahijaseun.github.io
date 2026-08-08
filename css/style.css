@@ -2,6 +2,10 @@
    GLOBAL
 ========================= */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -12,7 +16,25 @@ body {
 
 
 /* =========================
-   HERO / HEADER
+   NAVIGATION
+========================= */
+
+nav {
+    background: #071d33;
+    padding: 18px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   HERO
 ========================= */
 
 header {
@@ -30,13 +52,13 @@ header h1 {
 
 .subtitle {
     font-size: 22px;
-    margin: 10px auto;
     max-width: 800px;
+    margin: 10px auto;
 }
 
 .tagline {
     font-size: 17px;
-    max-width: 700px;
+    max-width: 720px;
     margin: 25px auto;
     opacity: 0.9;
 }
@@ -71,7 +93,7 @@ header h1 {
 section {
     max-width: 1000px;
     margin: auto;
-    padding: 70px 20px;
+    padding: 75px 20px;
     text-align: center;
 }
 
@@ -85,6 +107,15 @@ section p {
     max-width: 750px;
     margin: auto;
     font-size: 18px;
+}
+
+
+/* =========================
+   ALTERNATING SECTIONS
+========================= */
+
+section:nth-of-type(even) {
+    background: white;
 }
 
 
@@ -123,10 +154,16 @@ footer {
     }
 
     section {
-        padding: 50px 20px;
+        padding: 55px 20px;
     }
 
     section h2 {
         font-size: 28px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 14px;
     }
 }
